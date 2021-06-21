@@ -1,0 +1,28 @@
+triggers: none
+pr: none
+parameters:
+- name: EnvironmentGroupName
+  displayName: EnvironmentGroupName
+  type: object
+  default: none
+- name: EnvironmentTAGName
+  displayName: EnvironmentTAGName
+  type: object
+  default: none
+stages:
+  - Stage: Stage1
+    displayName: Stage1
+    jobs:
+    - deployment:
+      environment: 
+      name: ${{parameters.EnvironmentGroupName}}
+      resourceType: 'VirtualMachine'
+      tags: ${{parameters.EnvironmentTAGName}}
+      steps:
+- powershell: |
+   # Write your PowerShell commands here.
+   
+   Write-Host "Hello World"
+   New-Item -Path "F:\sairam-YAML" -Itemtype directory
+  displayName: 'Dir Creation'
+  condition: eq(variables['Isadir'], '$true')
