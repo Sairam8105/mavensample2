@@ -3,14 +3,7 @@ pr: none
 parameters:
 - name: EnvironmentGroupName
   displayName: EnvironmentGroupName
-  type: string
-  values:
-    - Environment1
-    - Environmment3
-    - x
-    - y
-    - z
-    - a
+  type: object
   default: none
 - name: EnvironmentTAGName
   displayName: EnvironmentTAGName
