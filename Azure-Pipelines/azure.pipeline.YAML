@@ -10,19 +10,26 @@ parameters:
   type: object
   default: none
 stages:
-  - Stage: Stage1
-    displayName: Stage1
+  - stage: stage_1
     jobs:
     - deployment:
       environment: 
-      name: ${{parameters.EnvironmentGroupName}}
-      resourceType: 'VirtualMachine'
-      tags: ${{parameters.EnvironmentTAGName}}
-      steps:
-- powershell: |
-   # Write your PowerShell commands here.
+        name: ${{parameters.EnvironmentGroupName}}
+        resourceType: 'VirtualMachine'
+        tags: ${{parameters.EnvironmentTAGName}}
+      strategy:
+       runOnce:
+         deploy:
+           steps:
+            - task: Powershell@2
+              displayName: task-1
+              inputs:
+                targetType: 'inline'
+                script: |
+                    # Write your PowerShell commands here.
    
-   Write-Host "Hello World"
-   New-Item -Path "F:\sairam-YAML" -Itemtype directory
-  displayName: 'Dir Creation'
-  condition: eq(variables['Isadir'], '$true')
+                     Write-Host "Hello World"
+                     New-Item -Path "F:\sairam-YAML" -Itemtype directory
+ 
+ 
+ # condition: eq(variables['Isadir'], '$true')
