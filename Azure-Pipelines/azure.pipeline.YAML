@@ -7,6 +7,10 @@ parameters:
   values:
     - Environment1
     - Environmment3
+    - x
+    - y
+    - z
+    - a
   default: none
 - name: EnvironmentTAGName
   displayName: EnvironmentTAGName
