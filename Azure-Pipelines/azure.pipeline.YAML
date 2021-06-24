@@ -4,6 +4,9 @@ parameters:
 - name: EnvironmentGroupName
   displayName: EnvironmentGroupName
   type: string
+  values:
+    - environment-1
+    - environment-3
   default: none
 - name: EnvironmentTAGName
   displayName: EnvironmentTAGName
