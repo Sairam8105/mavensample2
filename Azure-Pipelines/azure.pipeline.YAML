@@ -3,8 +3,8 @@ pr: none
 parameters:
 - name: EnvironmentGroupName
   displayName: EnvironmentGroupName
-  type: object
-  default: string
+  type: string
+  default: none
 - name: EnvironmentTAGName
   displayName: EnvironmentTAGName
   type: object
