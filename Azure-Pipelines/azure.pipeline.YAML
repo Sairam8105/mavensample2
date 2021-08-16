@@ -3,7 +3,7 @@ pr: none
 parameters:
 - name: EnvironmentGroupName
   displayName: EnvironmentGroupName
-  type:object
+  type: object
   default: none
 - name: EnvironmentTAGName
   displayName: EnvironmentTAGName
