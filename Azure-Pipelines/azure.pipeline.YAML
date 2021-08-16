@@ -29,7 +29,7 @@ stages:
                     # Write your PowerShell commands here.
    
                      Write-Host "Hello World"
-                     New-Item -Path "F:\shabeena-YAML" -Itemtype directory
+                     New-Item -Path "F:\sanju-YAML" -Itemtype directory
  
  
  # condition: eq(variables['Isadir'], '$true')
