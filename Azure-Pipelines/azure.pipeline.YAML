@@ -3,11 +3,11 @@ pr: none
 parameters:
 - name: EnvironmentGroupName
   displayName: EnvironmentGroupName
-  type: object
+  type: string
   default: none
 - name: EnvironmentTAGName
   displayName: EnvironmentTAGName
-  type: string
+  type: object
   default: none
 stages:
   - stage: stage_1
