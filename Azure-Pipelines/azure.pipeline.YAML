@@ -7,7 +7,7 @@ parameters:
   default: none
 - name: EnvironmentTAGName
   displayName: EnvironmentTAGName
-  type: object
+  type: string
   default: none
 stages:
   - stage: stage_1
